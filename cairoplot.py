@@ -133,7 +133,8 @@ class Plot(object):
             self.surface = surface
             return
         if not type(surface) in (str, unicode): 
-            raise TypeError("Surface should be either a Cairo surface or a filename, not %s" % surface)
+            raise TypeError("Surface should be either a Cairo surface"
+                            " or a filename, not %s" % surface)
         sufix = surface.rsplit(".")[-1].lower()
         self.filename = surface
         if sufix == "png":
