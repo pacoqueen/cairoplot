@@ -1212,7 +1212,8 @@ class HorizontalBarPlot(BarPlot):
             self.context.move_to(self.borders[HORZ] - width - 5, y + height/2)
             self.context.show_text(item)
             y += step + self.space
-        self.labels[VERT].reverse()
+        #self.labels[VERT].reverse()    # WHY? Eso hará que en el siguiente 
+                                    # redibujado se inviertan las etiquetas.
 
     def render_values(self):
         self.context.set_source_rgba(*self.value_label_color)
